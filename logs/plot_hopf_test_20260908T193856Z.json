@@ -1,0 +1,30 @@
+{
+  "script": "plot_hopf_test",
+  "timestamp_utc": "20260908T193856Z",
+  "started_utc": "2026-09-08T19:38:56.787886+00:00",
+  "argv": [
+    "plot_hopf_test.py",
+    "results/hopf_transient.csv"
+  ],
+  "parameters": {
+    "csv": "results/hopf_transient.csv",
+    "out": "/Users/naman/projects/tda-normal-forms/figures/hopf_transient.png",
+    "dpi": 200,
+    "fit_from": 4.63
+  },
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 11:23:37) [Clang 14.0.6 ]",
+  "platform": "macOS-26.4-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.1",
+    "ripser": "0.6.15",
+    "persim": "0.3.8"
+  },
+  "git_rev": null,
+  "results": {
+    "figure": "/Users/naman/projects/tda-normal-forms/figures/hopf_transient.png"
+  },
+  "status": "ok",
+  "finished_utc": "2026-09-08T19:39:03.233950+00:00"
+}

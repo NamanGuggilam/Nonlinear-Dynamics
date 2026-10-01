@@ -1,0 +1,73 @@
+{
+  "script": "sweep",
+  "timestamp_utc": "20260907T050431Z",
+  "started_utc": "2026-09-07T05:04:31.220099+00:00",
+  "argv": [
+    "sweep.py",
+    "--system",
+    "bautin",
+    "--n-theta",
+    "36",
+    "--box-coords",
+    "raw",
+    "--box",
+    "-0.5",
+    "0.5",
+    "-0.5",
+    "0.5",
+    "--t1",
+    "200",
+    "--out",
+    "results/sweep_bautin_demo.csv",
+    "--quiet"
+  ],
+  "parameters": {
+    "system": "bautin",
+    "eps": 0.3,
+    "n_theta": 36,
+    "box": [
+      -0.5,
+      0.5,
+      -0.5,
+      0.5
+    ],
+    "box_coords": "raw",
+    "nx": 12,
+    "ny": 12,
+    "t0": 0.0,
+    "t1": 200.0,
+    "n_samples": 400,
+    "keep_frac": 0.3,
+    "rtol": 1e-08,
+    "atol": 1e-10,
+    "escape_radius": 50.0,
+    "max_cloud": 1200,
+    "degenerate_tol": 1e-06,
+    "min_cloud": 50,
+    "subsample_seed": 1234,
+    "min_bounded_traj": 3,
+    "min_bounded_frac": 0.0,
+    "betti_rule": "gap",
+    "eps_scale": 2.0,
+    "gap_max_candidates": 12,
+    "out": "results/sweep_bautin_demo.csv",
+    "quiet": true
+  },
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 11:23:37) [Clang 14.0.6 ]",
+  "platform": "macOS-26.4-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.1",
+    "ripser": "0.6.15",
+    "persim": "0.3.8"
+  },
+  "git_rev": null,
+  "results": {
+    "csv": "results/sweep_bautin_demo.csv",
+    "n_undefined": 0,
+    "n_angles": 36
+  },
+  "status": "ok",
+  "finished_utc": "2026-09-07T05:09:47.885395+00:00"
+}

@@ -1,0 +1,38 @@
+{
+  "script": "verify_pipeline",
+  "timestamp_utc": "20260908T194232Z",
+  "started_utc": "2026-09-08T19:42:32.217240+00:00",
+  "argv": [
+    "verify_pipeline.py"
+  ],
+  "parameters": {
+    "n_points": 300,
+    "sigma": 0.05,
+    "seed": 0,
+    "persistence_threshold": 0.5,
+    "expected_h1": 1,
+    "maxdim": 1,
+    "max_print": 10,
+    "figure": "/Users/naman/projects/tda-normal-forms/figures/circle_check.png",
+    "dpi": 160
+  },
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 11:23:37) [Clang 14.0.6 ]",
+  "platform": "macOS-26.4-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.1",
+    "ripser": "0.6.15",
+    "persim": "0.3.8"
+  },
+  "git_rev": null,
+  "results": {
+    "n_h1_significant": 1,
+    "h1_persistences": [
+      1.4339057803153992
+    ],
+    "figure": "/Users/naman/projects/tda-normal-forms/figures/circle_check.png"
+  },
+  "status": "ok",
+  "finished_utc": "2026-09-08T19:42:49.130949+00:00"
+}

@@ -1,0 +1,39 @@
+{
+  "script": "plot_sweep",
+  "timestamp_utc": "20260908T035117Z",
+  "started_utc": "2026-09-08T03:51:17.668537+00:00",
+  "argv": [
+    "plot_sweep.py",
+    "results/bt_frac0.05.csv",
+    "--with-persistence",
+    "--out",
+    "figures/_test_pers.png"
+  ],
+  "parameters": {
+    "csv": "results/bt_frac0.05.csv",
+    "out": "figures/_test_pers.png",
+    "dpi": 200,
+    "figsize": [
+      9.0,
+      5.0
+    ],
+    "title": null,
+    "with_persistence": true
+  },
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 11:23:37) [Clang 14.0.6 ]",
+  "platform": "macOS-26.4-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.1",
+    "ripser": "0.6.15",
+    "persim": "0.3.8"
+  },
+  "git_rev": null,
+  "results": {
+    "figure": "figures/_test_pers.png",
+    "n_undefined": 27
+  },
+  "status": "ok",
+  "finished_utc": "2026-09-08T03:51:19.383521+00:00"
+}

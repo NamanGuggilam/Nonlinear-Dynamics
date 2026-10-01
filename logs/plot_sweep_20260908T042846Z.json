@@ -1,0 +1,39 @@
+{
+  "script": "plot_sweep",
+  "timestamp_utc": "20260908T042846Z",
+  "started_utc": "2026-09-08T04:28:46.665893+00:00",
+  "argv": [
+    "plot_sweep.py",
+    "results/bt_frac0.10.csv",
+    "--with-persistence",
+    "--out",
+    "figures/bt_frac010.png"
+  ],
+  "parameters": {
+    "csv": "results/bt_frac0.10.csv",
+    "out": "figures/bt_frac010.png",
+    "dpi": 200,
+    "figsize": [
+      9.0,
+      5.0
+    ],
+    "title": null,
+    "with_persistence": true
+  },
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 11:23:37) [Clang 14.0.6 ]",
+  "platform": "macOS-26.4-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.1",
+    "ripser": "0.6.15",
+    "persim": "0.3.8"
+  },
+  "git_rev": null,
+  "results": {
+    "figure": "figures/bt_frac010.png",
+    "n_undefined": 27
+  },
+  "status": "ok",
+  "finished_utc": "2026-09-08T04:28:48.090310+00:00"
+}

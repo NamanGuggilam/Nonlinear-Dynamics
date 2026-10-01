@@ -1,0 +1,64 @@
+{
+  "script": "hopf_transient_test",
+  "timestamp_utc": "20260908T192650Z",
+  "started_utc": "2026-09-08T19:26:50.623588+00:00",
+  "argv": [
+    "hopf_transient_test.py",
+    "--n-theta",
+    "3",
+    "--n-samples",
+    "2000",
+    "--t1",
+    "400",
+    "--out",
+    "/tmp/_smoke.csv"
+  ],
+  "parameters": {
+    "system": "bt",
+    "theta_min": 4.6,
+    "theta_max": 4.85,
+    "n_theta": 3,
+    "eps": 0.3,
+    "keep_fracs": [
+      0.3,
+      0.1,
+      0.03,
+      0.01
+    ],
+    "t0": 0.0,
+    "t1": 400.0,
+    "n_samples": 2000,
+    "box": [
+      -1.5,
+      2.0,
+      -1.5,
+      1.5
+    ],
+    "box_coords": "blown",
+    "nx": 12,
+    "ny": 12,
+    "rtol": 1e-08,
+    "atol": 1e-10,
+    "escape_radius": 50.0,
+    "max_cloud": 400,
+    "min_cloud": 100,
+    "subsample_seed": 1234,
+    "blowup_weights": "2,3",
+    "out": "/tmp/_smoke.csv"
+  },
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 11:23:37) [Clang 14.0.6 ]",
+  "platform": "macOS-26.4-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.1",
+    "ripser": "0.6.15",
+    "persim": "0.3.8"
+  },
+  "git_rev": null,
+  "results": {
+    "csv": "/tmp/_smoke.csv"
+  },
+  "status": "ok",
+  "finished_utc": "2026-09-08T19:27:00.613971+00:00"
+}
