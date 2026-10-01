@@ -1,0 +1,78 @@
+{
+  "script": "codensity_test",
+  "timestamp_utc": "20261001T194153Z",
+  "started_utc": "2026-10-01T19:41:53.782523+00:00",
+  "argv": [
+    "codensity_test.py"
+  ],
+  "parameters": {
+    "system": "bt",
+    "thetas": [
+      4.65,
+      4.712,
+      4.76
+    ],
+    "k": 12,
+    "eps": 0.3,
+    "blowup_weights": [
+      2,
+      3
+    ],
+    "box": [
+      -1.5,
+      2.0,
+      -1.5,
+      1.5
+    ],
+    "box_coords": "blown",
+    "nx": 12,
+    "ny": 12,
+    "t0": 0.0,
+    "t1": 300.0,
+    "n_samples": 400,
+    "keep_frac": 0.3,
+    "rtol": 1e-08,
+    "atol": 1e-10,
+    "escape_radius": 50.0,
+    "max_cloud": 1200,
+    "subsample_seed": 1234,
+    "s_min_pct": 10.0,
+    "s_max_pct": 90.0,
+    "n_s": 9,
+    "min_kept": 20,
+    "out": "results/codensity_bt.csv"
+  },
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 11:23:37) [Clang 14.0.6 ]",
+  "platform": "macOS-26.4-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.1",
+    "ripser": "0.6.15",
+    "persim": "0.3.8"
+  },
+  "git_rev": "5b41eb6",
+  "results": {
+    "codensity_4.65000": {
+      "min": 0.014675507750094118,
+      "median": 0.032476598073938226,
+      "p90": 0.0682730588126929,
+      "max": 0.11672441431137151
+    },
+    "codensity_4.71200": {
+      "min": 0.016482044476886875,
+      "median": 0.028683424463086117,
+      "p90": 0.04529992748991879,
+      "max": 0.06013366199583434
+    },
+    "codensity_4.76000": {
+      "min": 0.011951208440861451,
+      "median": 0.019864810771071995,
+      "p90": 0.027006148069625667,
+      "max": 0.042364533217429265
+    },
+    "csv": "/Users/naman/projects/tda-normal-forms/results/codensity_bt.csv"
+  },
+  "status": "ok",
+  "finished_utc": "2026-10-01T19:42:13.305258+00:00"
+}

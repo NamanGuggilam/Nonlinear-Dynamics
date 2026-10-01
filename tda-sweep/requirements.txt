@@ -1,0 +1,5 @@
+matplotlib==3.11.1
+numpy==2.5.2
+persim==0.3.8
+ripser==0.6.15
+scipy==1.18.1

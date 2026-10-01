@@ -578,11 +578,65 @@ plot_sweep.py       CSV -> figure
 diagnose_threshold.py  death-time distribution at one theta (threshold forensics)
 hopf_transient_test.py transient-truncation sweep of the raw H1 persistence curve
 plot_hopf_test.py      figure for the above
+codensity_test.py   k-th-nearest-neighbour codensity diagnostic (read-only)
 runlog.py           timestamped run-parameter logging (shared)
 requirements.txt    pinned
 figures/  logs/  results/
+tda-sweep/          the earlier stub scaffold, kept for history
 ```
 
 `cusp_rhs` is the planar suspension `xdot = b1 + b2*x - x^3`, `ydot = -y`. The cusp
 normal form is intrinsically one-dimensional; the contracting transverse direction
 lets the same planar machinery integrate and sample it.
+
+## Codensity diagnostic
+
+```bash
+./venv/bin/python codensity_test.py
+```
+
+`codensity_test.py` is a read-only diagnostic: it imports `sweep.py`'s own
+`initial_conditions`, `integrate_grid`, and `subsample`, so the cloud at each angle is
+built by the same code as the sweep (same box, same blowup, same `t_span`, same seed).
+It changes nothing in the pipeline and tunes nothing.
+
+`codensity(points, k=12)` is the distance from each point to its k-th nearest neighbour.
+For BT at theta = 4.65, 4.712, 4.76 (1200-point clouds, blowup coordinates):
+
+| theta | min | median | p90 | max | max/med | diameter |
+|---|---|---|---|---|---|---|
+| 4.65000 | 0.014676 | 0.032477 | 0.068273 | 0.116724 | 3.59 | 1.52229 |
+| 4.71200 | 0.016482 | 0.028683 | 0.045300 | 0.060134 | 2.10 | 0.99027 |
+| 4.76000 | 0.011951 | 0.019865 | 0.027006 | 0.042365 | 2.13 | 0.67936 |
+
+The clouds are mildly cored rather than uniformly sparse, and 4.65 is the most cored
+(spread 3.59 vs 2.10-2.13).
+
+Keeping only points with codensity <= s, s swept over the 10th-90th percentile of each
+angle's own codensity, longest H1 persistence raw (no floor). Surviving counts are
+120, 240, ... 1080 at every angle, so cloud size does not confound the columns.
+
+| theta | p10 | p20 | p30 | p40 | p50 | p60 | p70 | p80 | p90 |
+|---|---|---|---|---|---|---|---|---|---|
+| 4.65000 | 0.32348 | 0.50152 | 0.51907 | 0.66833 | 0.73681 | 0.74646 | 0.74582 | 0.77026 | 0.54344 |
+| 4.71200 | 0.38038 | 0.42521 | 0.35238 | 0.30004 | 0.26251 | 0.25549 | 0.25393 | 0.24541 | 0.24017 |
+| 4.76000 | 0.12294 | 0.14135 | 0.08566 | 0.08423 | 0.07699 | 0.09498 | 0.10798 | 0.10703 | 0.10905 |
+
+Unfiltered baseline on the full cloud: 0.51426 (4.65), 0.23887 (4.712), 0.11034 (4.76).
+
+Observations, not conclusions: at 4.65 filtering to the dense half *raises* the longest
+bar above baseline (0.737 at p50, 0.770 at p80 vs 0.514), so the sparse points are
+shortening the loop there; at 4.712 and 4.76 filtering leaves it at or below baseline,
+and the 4.712 row decays monotonically from p20 on. The 4.712 > 4.76 ordering holds at
+every s. Full verbatim run in `results/codensity_bt_results.txt`, per-row data in
+`results/codensity_bt.csv`.
+
+## `tda-sweep/` — the earlier scaffold
+
+`tda-sweep/` is the first pass at this project (Aug 2026), kept for history. It has the
+same shape — `sweep.py`, `normal_forms.py`, `verify_pipeline.py`, `runlog.py` — but the
+mathematical content is deliberately left as stubs: every function in its
+`normal_forms.py` and `betti_at_threshold` in its `sweep.py` raise `NotImplementedError`.
+The working pipeline is the one at the top level of this repo, which supersedes it. Its
+own `tda-sweep/README.md` documents it as it stood.
+

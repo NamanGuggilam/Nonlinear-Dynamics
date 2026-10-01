@@ -1,0 +1,7 @@
+2026-08-31 16:07:45,221 INFO run start: plot_sweep
+2026-08-31 16:07:45,221 INFO command line: plot_sweep.py /private/tmp/claude-501/-Users-naman/536d072f-8de2-4a83-9123-60ec2ac36edb/scratchpad/fake.csv --out /private/tmp/claude-501/-Users-naman/536d072f-8de2-4a83-9123-60ec2ac36edb/scratchpad/fake_betti.png
+2026-08-31 16:07:45,221 INFO param csv = PosixPath('/private/tmp/claude-501/-Users-naman/536d072f-8de2-4a83-9123-60ec2ac36edb/scratchpad/fake.csv')
+2026-08-31 16:07:45,221 INFO param out = PosixPath('/private/tmp/claude-501/-Users-naman/536d072f-8de2-4a83-9123-60ec2ac36edb/scratchpad/fake_betti.png')
+2026-08-31 16:07:45,221 INFO log file: /Users/naman/projects/tda-sweep/logs/plot_sweep_20260831-160745.log
+2026-08-31 16:07:45,221 INFO read 64 thetas from /private/tmp/claude-501/-Users-naman/536d072f-8de2-4a83-9123-60ec2ac36edb/scratchpad/fake.csv (11 undefined, 2 sectors)
+2026-08-31 16:07:45,461 INFO saved plot to /private/tmp/claude-501/-Users-naman/536d072f-8de2-4a83-9123-60ec2ac36edb/scratchpad/fake_betti.png
